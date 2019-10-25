@@ -25,7 +25,7 @@ const nielsgabel: ResumeData = {
             title: 'Design Tools — Human Interface',
             company: `Apple Inc`,
             description: [
-                `Lead programmer of Apple's primary UI design app` +
+                `Lead programmer on Apple's primary UI design tool` +
                 `\n\nCreated a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Includes subclassing Obj-C from JavaScript, support for Obj-C in-out arguments, and more.` +
                 `\n\nCreated a prototype visual programming language. Nodes can be created using Swift directly in the editor.`
             ],
