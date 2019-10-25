@@ -1,6 +1,3 @@
 [submodule "node_modules/zfont"]
 	path = node_modules/zfont
 	url = https://github.com/jaames/zfont.git
-[submodule "src/components/webfonts"]
-	path = src/components/webfonts
-	url = git@github.com:nielsbot/resume-webfonts.git
