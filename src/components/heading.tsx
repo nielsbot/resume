@@ -43,8 +43,8 @@ const createIllustration = () => {
     var x = 0.0;
     const positions: { x: number, y: number }[] = [
         { x: -200, y: 0 },
-        { x: -154, y: 0 },
-        { x: -134, y: 0 },
+        { x: -162, y: 0 },
+        { x: -150, y: 0 },
         { x: -89, y: 0 },
         { x: -67, y: 0 },
         { x: 0, y: 0 },
@@ -54,7 +54,7 @@ const createIllustration = () => {
         { x: 188, y: 0 },
     ];
 
-    textShapes = [..."nielsgabel"].map((char, index) => {
+    textShapes = [..."NielsGabel"].map((char, index) => {
 
         const p = positions[index]
 
@@ -62,7 +62,7 @@ const createIllustration = () => {
             addTo: i,
             font: font!,
             value: char,
-            fontSize: 80,
+            fontSize: 45,
             // textAlign: 'center',
             // textBaseline: 'bottom',
             color: 'rgb(255, 255, 255)',
@@ -117,7 +117,7 @@ const createIllustration = () => {
 const renderZDog = () => {
 
     font = font ?? new Zdog.Font({
-        src: '/static/3A68F4_0_0.ttf'
+        src: '/static/webfonts/3A6B95_0_0.ttf'
     });
 
     i = i ?? createIllustration()
@@ -135,5 +135,5 @@ export default () => {
         return () => window.removeEventListener("resize", renderZDog);
     }, [])
 
-    return <canvas style={{ width: '100%', height: '200px' }} id={`zdog-canvas`} width={480} height={240}></canvas>
+    return <canvas style={{ width: '100%', height: '200px' }} id={`zdog-canvas`} width={480} height={66}></canvas>
 }

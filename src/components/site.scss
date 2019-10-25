@@ -1,55 +1,102 @@
+@import "MyFontsWebfontsKit.css";
+
 // $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$font-family: Avenir;
+// $font-family: Avenir;
+$font-family: AvenirLTStd-Book;
+$background: color(display-p3 0.978 0.861 0.371);
+$display-head-color: color(display-p3 1 1 1 / 0.9);
+$text-color: color(display-p3 0 0 0 / 0.7);
 
 @media print {
-    .display-head {
-        color:rgb(0, 0, 0) !important;
-    }
-    div, .experience-item {
-        page-break-inside: avoid;
-    }
+  .display-head {
+    color: rgb(0, 0, 0) !important;
+  }
+  div,
+  .experience-item {
+    page-break-inside: avoid;
+  }
+
+  #name-head-container a {
+    display:none;
+  }
 }
 
 body {
-  background: color(display-p3 0.978 0.861 0.371);
-  color: color(display-p3 0 0 0 / 0.7);
+  background: $background;
+  color: $text-color;
   font-family: $font-family;
   padding: 20px;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom:0.5px solid color(display-p3 0 0 0 / 0.4);
+    &:hover {
+        border-bottom:0.5px solid $text-color;
+    }
+}
+
+hr {
+    border:none;
+    border-bottom:0.5px solid color( display-p3 0 0 0 / 0.3 );
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+#name-head {
+  display: inline-block;
+}
+
+#name-head-container {
+  display:flex;
+  align-items: center;
+}
+
+#name-head-links-container {
+  margin-left:auto;
+  text-align: right;
+  > * {
+    margin-left:10px;
+    &:first-child {
+      margin-left:0;
+    }
+  }
+  a {
+    color: color(display-p3 1 1 1);
+    text-decoration: none;
+    border-bottom:none;
+    display:inline-block;
+  }
+
+}
+
 .display-head {
-  font-family: Avenir-Black;
+  font-family: AvenirLTStd-Black;
+  font-weight: 600;
   font-size: 300%;
-  color: color( display-p3 1 1 1 / 1.0 );
+  color: $display-head-color;
   margin-bottom: 20px;
-//   mix-blend-mode: lighten;
+  border-bottom: 8px solid $display-head-color;
+  display: inline-block;
 }
 
 #overview {
-  font-size: 150%;
-  // margin-bottom:80px;
-  //   background: -webkit-linear-gradient(darkblue, purple);
-  //   background-clip: text;
-  //   -webkit-text-fill-color: transparent;
+  font-size: 180%;
+  // color:color(display-p3 0 0 0);
 }
 
 header {
-  // display:flex;
   max-width: 600px;
   margin: auto;
-  // padding:20px;
 
   canvas {
     margin: auto;
-    // width:50%;
-    // max-width: 600px;
   }
 }
 main {
-  // width:50%;
   max-width: 600px;
   margin: auto;
-  // padding:20px;
 
   h1,
   h2,
@@ -58,7 +105,8 @@ main {
   h5,
   h6 {
     color: black;
-    font-family: $font-family;
+    // font-family: AvenirLTStd-Heavy;
+
     font-weight: normal;
     font-size: 150%;
   }
@@ -70,40 +118,47 @@ main {
       .title-container {
         display: flex;
         align-items: baseline;
-        // border-bottom: 0.5px solid color(display-p3 0 0 0 / 0.2);
         display: inline-block;
-        // margin-bottom:4px;
-        margin-top:40px;
+        margin-top: 40px;
         > * {
-            margin-bottom:10px;
+          margin-top: 4px;
+          &:first-child {
+            margin-top: 0;
+          }
+          // margin-bottom:10px;
         }
       }
       .title {
-        // margin-top: 40px;
         margin-right: 15px;
-        // margin-bottom: 4px;
-        // padding-bottom: 4px;
         display: inline;
       }
-      .detail {
-        // margin: 0;
-      }
+      //   .detail {
+      // margin: 0;
+      //   }
       .company-name {
-        display: inline;
-        color: color( display-p3 0 0 0 / 0.5 );
+        // display: inline;
+        color: color(display-p3 0 0 0 / 0.5);
         mix-blend-mode: darken;
-
       }
       .when {
-        font-size: 80%;
-        // margin-bottom: 4px;
-        color: color( display-p3 0 0 0 / 0.5 );
+        font-size: 75%;
+        color: color(display-p3 0 0 0 / 0.5);
         mix-blend-mode: darken;
       }
+
+      .byline {
+        p {
+          &:first-child {
+            margin: 0;
+          }
+          margin-top: 4px;
+        }
+      }
+
       p {
-        margin: 10px auto;
+        margin: 14px auto;
         &:first-child {
-            margin-top:0;
+          // margin-top:4px;
         }
       }
     }
