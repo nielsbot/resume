@@ -1,0 +1,111 @@
+// $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-family: Avenir;
+
+@media print {
+    .display-head {
+        color:rgb(0, 0, 0) !important;
+    }
+    div, .experience-item {
+        page-break-inside: avoid;
+    }
+}
+
+body {
+  background: color(display-p3 0.978 0.861 0.371);
+  color: color(display-p3 0 0 0 / 0.7);
+  font-family: $font-family;
+  padding: 20px;
+}
+
+.display-head {
+  font-family: Avenir-Black;
+  font-size: 300%;
+  color: color( display-p3 1 1 1 / 1.0 );
+  margin-bottom: 20px;
+//   mix-blend-mode: lighten;
+}
+
+#overview {
+  font-size: 150%;
+  // margin-bottom:80px;
+  //   background: -webkit-linear-gradient(darkblue, purple);
+  //   background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+}
+
+header {
+  // display:flex;
+  max-width: 600px;
+  margin: auto;
+  // padding:20px;
+
+  canvas {
+    margin: auto;
+    // width:50%;
+    // max-width: 600px;
+  }
+}
+main {
+  // width:50%;
+  max-width: 600px;
+  margin: auto;
+  // padding:20px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: black;
+    font-family: $font-family;
+    font-weight: normal;
+    font-size: 150%;
+  }
+
+  ul#experience {
+    list-style: none;
+    padding: 0;
+    li {
+      .title-container {
+        display: flex;
+        align-items: baseline;
+        // border-bottom: 0.5px solid color(display-p3 0 0 0 / 0.2);
+        display: inline-block;
+        // margin-bottom:4px;
+        margin-top:40px;
+        > * {
+            margin-bottom:10px;
+        }
+      }
+      .title {
+        // margin-top: 40px;
+        margin-right: 15px;
+        // margin-bottom: 4px;
+        // padding-bottom: 4px;
+        display: inline;
+      }
+      .detail {
+        // margin: 0;
+      }
+      .company-name {
+        display: inline;
+        color: color( display-p3 0 0 0 / 0.5 );
+        mix-blend-mode: darken;
+
+      }
+      .when {
+        font-size: 80%;
+        // margin-bottom: 4px;
+        color: color( display-p3 0 0 0 / 0.5 );
+        mix-blend-mode: darken;
+      }
+      p {
+        margin: 10px auto;
+        &:first-child {
+            margin-top:0;
+        }
+      }
+    }
+  }
+}
