@@ -32,17 +32,17 @@
 */
 
   
-@font-face {font-family: 'AvenirLTStd-Heavy';src: url('/static/webfonts/3A6B95_0_0.eot');src: url('/static/webfonts/3A6B95_0_0.eot?#iefix') format('embedded-opentype'),url('/static/webfonts/3A6B95_0_0.woff2') format('woff2'),url('/static/webfonts/3A6B95_0_0.woff') format('woff'),url('/static/webfonts/3A6B95_0_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLTStd-Heavy';src: url('./webfonts/3A6B95_0_0.eot');src: url('./webfonts/3A6B95_0_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3A6B95_0_0.woff2') format('woff2'),url('./webfonts/3A6B95_0_0.woff') format('woff'),url('./webfonts/3A6B95_0_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'AvenirLTStd-Roman';src: url('/static/webfonts/3A6B95_1_0.eot');src: url('/static/webfonts/3A6B95_1_0.eot?#iefix') format('embedded-opentype'),url('/static/webfonts/3A6B95_1_0.woff2') format('woff2'),url('/static/webfonts/3A6B95_1_0.woff') format('woff'),url('/static/webfonts/3A6B95_1_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLTStd-Roman';src: url('./webfonts/3A6B95_1_0.eot');src: url('./webfonts/3A6B95_1_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3A6B95_1_0.woff2') format('woff2'),url('./webfonts/3A6B95_1_0.woff') format('woff'),url('./webfonts/3A6B95_1_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'AvenirLTStd-Light';src: url('/static/webfonts/3A6B95_2_0.eot');src: url('/static/webfonts/3A6B95_2_0.eot?#iefix') format('embedded-opentype'),url('/static/webfonts/3A6B95_2_0.woff2') format('woff2'),url('/static/webfonts/3A6B95_2_0.woff') format('woff'),url('/static/webfonts/3A6B95_2_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLTStd-Light';src: url('./webfonts/3A6B95_2_0.eot');src: url('./webfonts/3A6B95_2_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3A6B95_2_0.woff2') format('woff2'),url('./webfonts/3A6B95_2_0.woff') format('woff'),url('./webfonts/3A6B95_2_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'AvenirLTStd-Book';src: url('/static/webfonts/3A6B95_3_0.eot');src: url('/static/webfonts/3A6B95_3_0.eot?#iefix') format('embedded-opentype'),url('/static/webfonts/3A6B95_3_0.woff2') format('woff2'),url('/static/webfonts/3A6B95_3_0.woff') format('woff'),url('/static/webfonts/3A6B95_3_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLTStd-Book';src: url('./webfonts/3A6B95_3_0.eot');src: url('./webfonts/3A6B95_3_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3A6B95_3_0.woff2') format('woff2'),url('./webfonts/3A6B95_3_0.woff') format('woff'),url('./webfonts/3A6B95_3_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'AvenirLTStd-Black';src: url('/static/webfonts/3A6B95_4_0.eot');src: url('/static/webfonts/3A6B95_4_0.eot?#iefix') format('embedded-opentype'),url('/static/webfonts/3A6B95_4_0.woff2') format('woff2'),url('/static/webfonts/3A6B95_4_0.woff') format('woff'),url('/static/webfonts/3A6B95_4_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLTStd-Black';src: url('./webfonts/3A6B95_4_0.eot');src: url('./webfonts/3A6B95_4_0.eot?#iefix') format('embedded-opentype'),url('./webfonts/3A6B95_4_0.woff2') format('woff2'),url('./webfonts/3A6B95_4_0.woff') format('woff'),url('./webfonts/3A6B95_4_0.ttf') format('truetype');}
  
