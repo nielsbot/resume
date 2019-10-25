@@ -19,29 +19,30 @@ interface ResumeData {
 }
 
 const nielsgabel: ResumeData = {
-    overview: `Design + code.\n\nCurrently focused on design tools and (visual) programming languages.`,
+    overview: `Design + code.\n\nCreative focus: Design tools and (visual) programming languages.`,
     experience: [
         {
             title: 'Design Tools — Human Interface',
             company: `Apple Inc`,
             description: [
-                `Lead programmer on Apple's primary UI design tool` +
-                `\n\nCreated a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Includes subclassing Obj-C from JavaScript, support for Obj-C in-out arguments, and more.` +
-                `\n\nCreated a prototype visual programming language. Nodes can be created using Swift directly in the editor.`
+                `Lead programmer on Apple's primary UI design tool. directly supporting the UI prototyping team.` +
+                `\n\nAlso:` +
+                `\n\nBuilt a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Includes subclassing Obj-C from JavaScript, support for Obj-C in-out arguments, and more.` +
+                `\n\nBuilt a prototype visual programming language. Nodes can be created using Swift directly in the editor--the code is dynamically re-compiled.`
             ],
             when: `2012 Apr — Now`
         },
         {
             title: `Design and Technology`,
             company: `Seesaw Psychology Group`,
-            description: `Co-founder. Responsibilities include: website, [interior design](https://www.icloud.com/sharedalbum/#B1aJ5HumnJJshVM), databases, back office, and more.`,
+            description: `Co-founder. Responsibilities include: website, [interior design](https://www.icloud.com/sharedalbum/#B1aJ5HumnJJshVM), custom internal apps, and more.`,
             when: `2010 Aug — Now`
         },
         {
             title: 'Lead iOS Developer',
             company: `Doubledutch Inc`,
             description: [
-                `Design and implementation of enterprise iOS apps. Designed a built a news app (think Apple News) for Cisco's sales team.`
+                `Designed and built enterprise iOS apps. Designed a built a news app (think Apple News) for Cisco's sales team.`
             ],
             when: `2011 Dec — 2012 Apr`
         },
@@ -49,7 +50,7 @@ const nielsgabel: ResumeData = {
             title: 'Designer and iOS developer',
             company: `Spot Inc`,
             description: [
-                `Design and implementation of _Spot_, a location wishlisting app a highly visual and compelling user experience.`
+                `Designed and built of Spot, a location wishlisting app a highly visual and compelling user experience.`
             ],
             when: `2010 Aug — 2011 Dec`
         },
@@ -132,4 +133,9 @@ export default () => <div>
             </div>
         </div>
     </main>
+    <footer>
+        <div className='print-only'>
+            <div id='site-link'>nielsgabel.com</div>
+        </div>
+    </footer>
 </div>
