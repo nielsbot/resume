@@ -27,7 +27,7 @@ const nielsgabel: ResumeData = {
             description: [
                 `Lead programmer on Apple's primary UI design tool, directly supporting the UI prototyping team.` +
                 `\n\n_Also:_` +
-                `\n\nBuilt a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Supports subclassing Obj-C from JavaScript, Obj-C in-out arguments, and more.` +
+                `\n\nBuilt a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Supports subclassing Obj-C from JavaScript, Obj-C/C in-out arguments, and more.` +
                 `\n\nBuilt a prototype visual programming language. Supports live editing of Swift via dynamic recompile and reload.`
             ],
             when: `2012 Apr — Now`
