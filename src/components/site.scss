@@ -2,9 +2,18 @@
 
 $font-family: AvenirLTStd-Book;
 $background: color(display-p3 0.978 0.861 0.371);
+$dark-background: color(display-p3 0 0 0);
 $display-head-color: color(display-p3 1 1 1 / 0.9);
 $text-color: color(display-p3 0 0 0 / 0.7);
+$dark-text-color: color(display-p3 1 1 1 / 0.85);
 $narrow: 320px;
+$dark-mode-headline-color: color(display-p3 0.978 0.861 0.371);
+
+@mixin dark-mode-gradient-text {
+  background: -webkit-linear-gradient($dark-mode-headline-color, color(display-p3 1 1 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @media print {
   .display-head {
@@ -31,6 +40,10 @@ body {
   @media screen and (max-width: $narrow) {
     font-size: 15px;
   }
+  @media (prefers-color-scheme: dark) {
+    background: $dark-background;
+    color: $dark-text-color;
+  }
 }
 
 a {
@@ -47,13 +60,17 @@ hr {
   border-bottom: 0.5px solid color(display-p3 0 0 0 / 0.3);
   margin-top: 40px;
   margin-bottom: 40px;
+  @media (prefers-color-scheme: dark) {
+    border-color:color(display-p3 1 1 1 / 0.5);
+  }
+
 }
 
 #name-head {
   display: inline;
   flex-shrink: 10;
   @media screen and (max-width: 550px) {
-    width:min-content;
+    width: min-content;
   }
 }
 
@@ -63,17 +80,17 @@ hr {
 }
 
 #name-head-links-container {
-  margin-top:10px;
+  margin-top: 10px;
   margin-left: auto;
-  padding-left:20px;
+  padding-left: 20px;
   text-align: right;
   flex-shrink: 1;
   > * {
-    margin-top:2px;
-    margin-bottom:2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     margin-left: 20px;
     &:first-child {
-      margin-left: 0; 
+      margin-left: 0;
     }
   }
   a {
@@ -83,7 +100,14 @@ hr {
     display: inline-block;
     &:hover {
       border-bottom: 1px solid color(display-p3 1 1 1);
-    }  
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $dark-mode-headline-color;
+      &:hover {
+        border-color: $dark-mode-headline-color;
+      }
+    }
   }
 }
 
@@ -96,6 +120,10 @@ hr {
   border-bottom: 4px solid $display-head-color;
   display: inline-block;
   flex-shrink: 2;
+  @media (prefers-color-scheme: dark) {
+    color: color(display-p3 0.978 0.861 0.371);
+    border-color: color(display-p3 0.978 0.861 0.371);
+  }
 }
 
 .print-only {
@@ -112,7 +140,7 @@ hr {
   font-size: 200%;
   // color:color(display-p3 0 0 0);
   @media screen and (max-width: $narrow) {
-    font-size:175%;
+    font-size: 175%;
   }
 }
 
@@ -130,7 +158,7 @@ header {
 footer {
   margin-top: 40px;
   #site-link {
-    font-size:80%;
+    font-size: 80%;
     color: color(display-p3 0 0 0 / 0.5);
   }
 }
@@ -150,6 +178,9 @@ main {
 
     @media screen and (max-width: $narrow) {
       font-size: 150%;
+    }
+    @media (prefers-color-scheme: dark) {
+      color: $dark-mode-headline-color;
     }
   }
 
@@ -175,19 +206,21 @@ main {
         display: inline;
       }
       .company-name {
-        color: color(display-p3 0 0 0 / 0.5);
       }
       .when {
         font-size: 75%;
-        color: color(display-p3 0 0 0 / 0.5);
       }
 
       .byline {
+        color: color(display-p3 0 0 0 / 0.5);
         p {
           &:first-child {
             margin: 0;
           }
           margin-top: 4px;
+        }
+        @media (prefers-color-scheme: dark) {
+          color: color(display-p3 1 1 1 / 0.5);
         }
       }
 
