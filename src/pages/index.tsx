@@ -24,12 +24,11 @@ const nielsgabel: ResumeData = {
         {
             title: 'Design Tools — Human Interface',
             company: `Apple Inc`,
-            description: [
-                `Lead programmer on Apple's primary UI design tool, directly supporting the UI prototyping team.` +
+            description:
+                `Lead programmer on Apple's primary UI prototyping tool, directly supporting the prototyping team.` +
                 `\n\n_Also:_` +
                 `\n\nBuilt a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Supports subclassing Obj-C from JavaScript, Obj-C/C in-out arguments, and more.` +
-                `\n\nBuilt a prototype visual programming language. Supports live editing of Swift via dynamic recompile and reload.`
-            ],
+                `\n\nBuilt a prototype visual programming language. Supports live editing of Swift via dynamic recompile and reload.`,
             when: `2012 Apr — Now`
         },
         {
@@ -92,13 +91,12 @@ const Paragraphs = ({ id = '', strings }: { id?: string, strings: ParagraphData 
     return <div id={id}>{stringsArray.map((desc, index) => <ReactMarkdown key={index.toString()} source={desc} />)}</div>
 }
 
-// the page
+// the page renderer
 export default () => <div>
     <Helmet>
         <title>Niels Gabel — Résumé</title>
     </Helmet>
     <header>
-        {/* <Heading /> */}
         <div id='name-head-container'>
             <h1 id='name-head' className='display-head'>Niels Gabel</h1>
             <div id='name-head-links-container'>
