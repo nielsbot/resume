@@ -25,8 +25,7 @@ const nielsgabel: ResumeData = {
             title: 'Design Tools — Human Interface',
             company: `Apple Inc`,
             description:
-                `Lead programmer on Apple's primary UI prototyping tool, directly supporting the prototyping team.` +
-                `\n\n_Also:_` +
+                `Lead programmer on Mica, Apple's primary UI prototyping tool, working directly with the UI prototyping team.` +
                 `\n\nBuilt a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Supports subclassing Obj-C from JavaScript, Obj-C/C in-out arguments, and more.` +
                 `\n\nBuilt a prototype visual programming language. Supports live editing of Swift via dynamic recompile and reload.`,
             when: `2012 Apr — Now`
@@ -56,13 +55,13 @@ const nielsgabel: ResumeData = {
         {
             title: 'Staff Engineer',
             company: `Sun Microsystems`,
-            description: `Was part of the team building a visual programming environment for JavaFX`,
+            description: `Helped create a visual programming environment for JavaFX`,
             when: `2008 Nov — 2010 Jul`
         },
         {
             title: 'Independent Software Developer',
             description: [
-                `IOS App consulting, design and programming.`,
+                `iOS App consulting, design and programming.`,
                 `Co-founded HoodHot Inc. Designed and built Tokyo Teleport, an iOS travel guide to Tokyo. Really, a pocketable travel show incorporating professionally produced video segments, offline maps, and more.`
             ],
             when: `2007 Oct — 2008 Sep`
@@ -76,7 +75,7 @@ const nielsgabel: ResumeData = {
             title: 'Senior Scientist/Engineer',
             company: `Apple Inc`,
             description: [
-                `Built and maintained the FireWire user client. Helped develop the FireWire driver stack for OS X. Learned a lot about professional software development and multithreaded and asynchronous software.`
+                `Built and maintained the FireWire user client. Helped develop the FireWire driver stack for OS X. Gained extensive experience with professional software development and multithreaded and asynchronous software.`
             ],
             when: `1999 Oct — 2007 Jul`
         },
