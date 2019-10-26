@@ -25,7 +25,7 @@ const nielsgabel: ResumeData = {
             title: 'Design Tools — Human Interface',
             company: `Apple Inc`,
             description:
-                `Lead programmer on Mica, Apple's primary UI prototyping tool, working directly with the UI prototyping team.` +
+                `Lead programmer on Mica, Apple's proprietary UI prototyping tool, working directly with the UI prototyping team.` +
                 `\n\nBuilt a full-featured JS-to-native library similar to [PyObjC](https://pypi.org/project/pyobjc/). Supports subclassing Obj-C from JavaScript, Obj-C/C in-out arguments, and more.` +
                 `\n\nBuilt a prototype visual programming language. Supports live editing of Swift via dynamic recompile and reload.`,
             when: `2012 Apr — Now`
@@ -100,7 +100,7 @@ export default () => <div>
             <h1 id='name-head' className='display-head'>Niels Gabel</h1>
             <div id='name-head-links-container'>
                 <a href='https://github.com/nielsbot' className='subtle' style={{ marginLeft: 'auto' }}>GitHub</a>
-                <a href='https://stackoverflow.com/users/210171/nielsbot' className='subtle'>Stack Overflow</a>
+                <a href='https://stackoverflow.com/users/210171/nielsbot' className='subtle'>Stack&nbsp;Overflow</a>
             </div>
         </div>
         <Paragraphs id='overview' strings={nielsgabel.overview} />

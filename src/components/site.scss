@@ -50,7 +50,11 @@ hr {
 }
 
 #name-head {
-  display: inline-block;
+  display: inline;
+  flex-shrink: 10;
+  @media screen and (max-width: 550px) {
+    width:min-content;
+  }
 }
 
 #name-head-container {
@@ -59,10 +63,14 @@ hr {
 }
 
 #name-head-links-container {
+  margin-top:10px;
   margin-left: auto;
+  padding-left:20px;
   text-align: right;
+  flex-shrink: 1;
   > * {
-    margin-bottom:4px;
+    margin-top:2px;
+    margin-bottom:2px;
     margin-left: 20px;
     &:first-child {
       margin-left: 0; 
@@ -85,7 +93,7 @@ hr {
   font-size: 300%;
   color: $display-head-color;
   margin-bottom: 20px;
-  border-bottom: 8px solid $display-head-color;
+  border-bottom: 4px solid $display-head-color;
   display: inline-block;
   flex-shrink: 2;
 }
@@ -103,6 +111,9 @@ hr {
 #overview {
   font-size: 200%;
   // color:color(display-p3 0 0 0);
+  @media screen and (max-width: $narrow) {
+    font-size:175%;
+  }
 }
 
 main,
