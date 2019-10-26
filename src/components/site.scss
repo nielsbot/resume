@@ -14,10 +14,6 @@ $narrow: 320px;
   .experience-item {
     page-break-inside: avoid;
   }
-
-  #name-head-container a {
-    display: none;
-  }
 }
 
 @media screen and (max-width: $narrow) {
