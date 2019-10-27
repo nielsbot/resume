@@ -1,13 +1,29 @@
 @import "MyFontsWebfontsKit.css";
 
+$niels-yellow: rgb(1.00 * 255, 0.85 * 255, 0.25 * 255);
+$niels-yellow-p3: color(display-p3 0.978 0.861 0.371);
+
 $font-family: AvenirLTStd-Book;
-$background: color(display-p3 0.978 0.861 0.371);
-$dark-background: color(display-p3 0.2 0.2 0.2);
-$display-head-color: color(display-p3 1 1 1 / 0.9);
-$text-color: color(display-p3 0 0 0 / 0.7);
-$dark-text-color: color(display-p3 1 1 1 / 0.85);
+$background: $niels-yellow;
+$background-p3: $niels-yellow-p3;
+$dark-background: rgb(0.2*255, 0.2*255, 0.2*255);
+$dark-background-p3: color(display-p3 0.2 0.2 0.2);
+$display-head-color: rgba(255, 255, 255, 0.9);
+$display-head-color-p3: color(display-p3 1 1 1 / 0.9);
+$text-color: rgba(0, 0, 0, 0.7);
+$text-color-p3: color(display-p3 0 0 0 / 0.7);
+$dark-text-color: rgba(255, 255, 255, 0.85);
+$dark-text-color-p3: color(display-p3 1 1 1 / 0.85);
+$dark-mode-headline-color: $niels-yellow;
+$dark-mode-headline-color-p3: $niels-yellow-p3;
 $narrow: 320px;
-$dark-mode-headline-color: color(display-p3 0.978 0.861 0.371);
+
+@mixin if-supported($property, $maybe-supported, $supported) {
+  #{$property}: $supported;
+  @supports ($property: $maybe-supported) {
+    #{$property}: $maybe-supported;
+  }
+}
 
 @mixin dark-mode-gradient-text {
   background: -webkit-linear-gradient($dark-mode-headline-color, color(display-p3 1 1 1));
@@ -32,8 +48,10 @@ $dark-mode-headline-color: color(display-p3 0.978 0.861 0.371);
 }
 
 body {
-  background: $background;
-  color: $text-color;
+  // background: $background;
+  @include if-supported(background, $background-p3, $background);
+  // color: $text-color;
+  @include if-supported(text-color, $text-color-p3, $text-color);
   font-family: $font-family;
   padding: 20px;
 
@@ -49,21 +67,24 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 0.5px solid color(display-p3 0 0 0 / 0.4);
+  border-bottom: 0.5px solid;
+  // border-bottom-color: color(display-p3 0 0 0 / 0.4);
+  @include if-supported(border-bottom-color, color(display-p3 0 0 0 / 0.4), rgba(0, 0, 0, 0.4));
   &:hover {
-    border-bottom: 0.5px solid $text-color;
+    border-bottom-color: $text-color;
   }
 }
 
 hr {
   border: none;
-  border-bottom: 0.5px solid color(display-p3 0 0 0 / 0.3);
+  border-bottom: 0.5px solid;
+  @include if-supported(border-bottom-color, color(display-p3 0 0 0 / 0.3), rgba(0, 0, 0, 0.3));
   margin-top: 40px;
   margin-bottom: 40px;
   @media (prefers-color-scheme: dark) {
-    border-color:color(display-p3 1 1 1 / 0.5);
+    // border-color-color: color(display-p3 1 1 1 / 0.5);
+    @include if-supported(border-bottom-color, color(display-p3 1 1 1 / 0.5), rgba(1, 1, 1, 0.5));
   }
-
 }
 
 #name-head {
@@ -94,12 +115,12 @@ hr {
     }
   }
   a {
-    color: color(display-p3 1 1 1);
+    @include if-supported(color, color(display-p3 1 1 1), rgb(255, 255, 255));
     text-decoration: none;
     border-bottom: 1px solid transparent;
     display: inline-block;
     &:hover {
-      border-bottom: 1px solid color(display-p3 1 1 1);
+      @include if-supported(border-bottom-color, color(display-p3 1 1 1), rgb(255, 255, 255));
     }
 
     @media (prefers-color-scheme: dark) {
@@ -117,12 +138,16 @@ hr {
   font-size: 300%;
   color: $display-head-color;
   margin-bottom: 20px;
-  border-bottom: 4px solid $display-head-color;
+  border-bottom: 4px solid;
+  // border-bottom-color: $display-head-color;
+  @include if-supported(border-bottom-color, $display-head-color-p3, $display-head-color);
   display: inline-block;
   flex-shrink: 2;
   @media (prefers-color-scheme: dark) {
-    color: color(display-p3 0.978 0.861 0.371);
-    border-color: color(display-p3 0.978 0.861 0.371);
+    // color: $niels-yellow-p3;
+    @include if-supported(color, $niels-yellow-p3, $niels-yellow);
+    // border-color: $niels-yellow-p3;
+    @include if-supported(border-bottom-color, $niels-yellow-p3, $niels-yellow);
   }
 }
 
@@ -198,21 +223,18 @@ main {
           &:first-child {
             margin-top: 0;
           }
-          // margin-bottom:10px;
         }
       }
       .title {
         margin-right: 15px;
         display: inline;
       }
-      .company-name {
-      }
       .when {
         font-size: 75%;
       }
 
       .byline {
-        color: color(display-p3 0 0 0 / 0.5);
+        @include if-supported(color, color(display-p3 0 0 0 / 0.5), rgba(0, 0, 0, 0.5));
         p {
           &:first-child {
             margin: 0;
@@ -220,15 +242,12 @@ main {
           margin-top: 4px;
         }
         @media (prefers-color-scheme: dark) {
-          color: color(display-p3 1 1 1 / 0.5);
+          @include if-supported(color, color(display-p3 1 1 1 / 0.5), rgba(1, 1, 1, 0.5));
         }
       }
 
       p {
         margin: 14px auto;
-        &:first-child {
-          // margin-top:4px;
-        }
       }
     }
   }
