@@ -62,7 +62,7 @@ const nielsgabel: ResumeData = {
             title: 'Independent Software Developer',
             description: [
                 `iOS App consulting, design and programming.`,
-                `Co-founded HoodHot Inc. Designed and built Tokyo Teleport, an iOS travel guide to Tokyo. Really, a pocketable travel show incorporating professionally produced video segments, offline maps, and more.`
+                `Co-founded HoodHot Inc. Designed and built [Tokyo Teleport](https://www.youtube.com/watch?v=E1XBgtTyMXU), an iOS travel guide to Tokyo. Really, a pocketable travel show incorporating professionally produced video segments, offline maps, and more.`
             ],
             when: `2007 Oct — 2008 Sep`
         },
