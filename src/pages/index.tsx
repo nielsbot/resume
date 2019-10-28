@@ -33,7 +33,7 @@ const nielsgabel: ResumeData = {
         {
             title: `Design and Technology`,
             company: `Seesaw Psychology Group`,
-            description: `Co-founder. Responsible for design ([interiors](https://www.icloud.com/sharedalbum/#B1aJ5HumnJJshVM), marketing collateral, and website), and internal apps, and more.`,
+            description: `Co-founder. Responsible for design ([interiors](https://www.icloud.com/sharedalbum/#B1aJ5HumnJJshVM), marketing collateral, and website), internal apps, and more.`,
             when: `2010 Aug — Now`
         },
         {
