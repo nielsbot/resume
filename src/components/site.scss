@@ -17,6 +17,7 @@ $dark-text-color-p3: color(display-p3 1 1 1 / 0.85);
 $dark-mode-headline-color: $niels-yellow;
 $dark-mode-headline-color-p3: $niels-yellow-p3;
 $narrow: 320px;
+$site-width: 720px;
 
 @mixin if-supported($property, $maybe-supported, $supported) {
   #{$property}: $supported;
@@ -48,9 +49,7 @@ $narrow: 320px;
 }
 
 body {
-  // background: $background;
   @include if-supported(background, $background-p3, $background);
-  // color: $text-color;
   @include if-supported(text-color, $text-color-p3, $text-color);
   font-family: $font-family;
   padding: 20px;
@@ -176,7 +175,7 @@ hr {
 main,
 header,
 footer {
-  max-width: 800px;
+  max-width: $site-width;
   margin: auto;
 }
 header {
